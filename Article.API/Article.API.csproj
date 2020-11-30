@@ -4,5 +4,48 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Log4\**" />
+    <Compile Remove="Model\NewFolder\**" />
+    <Compile Remove="Provider\**" />
+    <Content Remove="Log4\**" />
+    <Content Remove="Model\NewFolder\**" />
+    <Content Remove="Provider\**" />
+    <EmbeddedResource Remove="Log4\**" />
+    <EmbeddedResource Remove="Model\NewFolder\**" />
+    <EmbeddedResource Remove="Provider\**" />
+    <None Remove="Log4\**" />
+    <None Remove="Model\NewFolder\**" />
+    <None Remove="Provider\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Model\ArticleCommentBaseViewModel.cs" />
+    <Compile Remove="Model\ArticleCommentDTO.cs" />
+    <Compile Remove="Model\ArticleEditViewModel.cs" />
+    <Compile Remove="Model\BaseDTO.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="3.1.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Article.Infrastructure\Article.Infrastructure.csproj" />
+  </ItemGroup>
+
 
 </Project>
