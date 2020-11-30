@@ -16,10 +16,11 @@ namespace Article.API.Controllers
         private readonly IRepository<ArticlesComments, Guid> _repo;
         private readonly IMemoryCache _memoryCache;
         private readonly string cacheKey = "articleCommentCache";
-        public ArticleCommentsController(IRepository<ArticlesComments,Guid> repo, IMemoryCache memoryCache)
+        public ArticleCommentsController(IRepository<ArticlesComments,Guid> repo, IMemoryCache memoryCache, ILogger<ArticleCommentsController> logger)
         {
             _repo = repo;
             _memoryCache = memoryCache;
+            _logger = logger;
         }
         [HttpGet("GetAllArticleComments")]
         public IActionResult GetAll()

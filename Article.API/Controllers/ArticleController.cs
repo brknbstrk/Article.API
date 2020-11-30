@@ -17,10 +17,11 @@ namespace Article.API.Controllers
         private readonly IRepository<Articles,Guid> _repo;
         private readonly IMemoryCache _memoryCache;
         private readonly string cacheKey = "articleCache";
-        public ArticleController(IRepository<Articles,Guid> repo,IMemoryCache memoryCache)
+        public ArticleController(IRepository<Articles,Guid> repo,IMemoryCache memoryCache, ILogger<ArticleController> logger)
         {
             _repo = repo;
             _memoryCache = memoryCache;
+            _logger = logger;
         }
         [HttpGet("GetAllArticle")]
         public IActionResult GetAll()

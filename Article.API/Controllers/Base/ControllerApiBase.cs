@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 
 namespace Article.API.Controllers.Base
 {
@@ -9,7 +10,6 @@ namespace Article.API.Controllers.Base
     [Route("api/[controller]")]
     public abstract class ControllerApiBase: ControllerBase
     {
-        private readonly ILogger<ArticleController> _logger;
         public ControllerApiBase()
         {
         }
