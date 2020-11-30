@@ -44,7 +44,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Article.Infrastructure\Article.Infrastructure.csproj" />
+    <ProjectReference Include="..\Article.Infrastructure\Article.Infrastructure.csproj" />
   </ItemGroup>
 
 
